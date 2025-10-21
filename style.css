@@ -1,0 +1,592 @@
+/* VoiceLink Integration - WhatsApp Dark Theme Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-primary: #0A0E11;
+    --bg-secondary: #111B21;
+    --surface: #202C33;
+    --surface-light: #2A3942;
+    --accent: #25D366;
+    --accent-dark: #1FAD54;
+    --text-primary: #E9EDEF;
+    --text-secondary: #8696A0;
+    --border: #2A3942;
+    --shadow: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #128C7E, #25D366);
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.logo-icon {
+    font-size: 48px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.logo h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+}
+
+.tagline {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Hero Section */
+.hero {
+    padding: 60px 20px;
+    text-align: center;
+    background: var(--bg-secondary);
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.hero p {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+.btn-primary:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.btn-secondary:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-large {
+    padding: 18px 40px;
+    font-size: 18px;
+}
+
+/* Features Section */
+.features {
+    padding: 60px 20px;
+    background: var(--bg-primary);
+}
+
+.features h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: var(--surface);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 8px 24px var(--shadow);
+}
+
+.feature-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    font-size: 15px;
+}
+
+/* Demo Section */
+.demo-section {
+    padding: 60px 20px;
+    background: var(--bg-secondary);
+    text-align: center;
+}
+
+.demo-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.demo-description {
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+
+.demo-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--surface);
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+}
+
+.demo-note {
+    margin-top: 20px;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* Installation Section */
+.installation {
+    padding: 60px 20px;
+    background: var(--bg-primary);
+}
+
+.installation h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.code-block {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--surface);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.code-header {
+    background: var(--surface-light);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.code-header span {
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.copy-btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+    background: var(--accent-dark);
+}
+
+.code-block pre {
+    padding: 20px;
+    overflow-x: auto;
+    margin: 0;
+}
+
+.code-block code {
+    color: var(--text-primary);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Documentation Section */
+.documentation {
+    padding: 60px 20px;
+    background: var(--bg-secondary);
+}
+
+.documentation h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.doc-section {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    background: var(--surface);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.doc-section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.config-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.config-table th,
+.config-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.config-table th {
+    background: var(--surface-light);
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.config-table td {
+    color: var(--text-secondary);
+}
+
+.config-table code {
+    background: var(--surface-light);
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: var(--accent);
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+}
+
+.setup-steps {
+    margin: 20px 0;
+    padding-left: 25px;
+    color: var(--text-secondary);
+}
+
+.setup-steps li {
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.setup-steps code {
+    background: var(--surface-light);
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: var(--accent);
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 12px;
+}
+
+.features-list li {
+    color: var(--text-secondary);
+    padding: 8px;
+}
+
+/* Architecture Section */
+.architecture {
+    padding: 60px 20px;
+    background: var(--bg-primary);
+    text-align: center;
+}
+
+.architecture h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.arch-diagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.arch-component {
+    background: var(--surface);
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid var(--accent);
+    min-width: 200px;
+}
+
+.arch-component h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--accent);
+}
+
+.arch-component p {
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+}
+
+.arch-tech {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.arch-arrow {
+    font-size: 32px;
+    color: var(--accent);
+}
+
+/* Security Section */
+.security {
+    padding: 60px 20px;
+    background: var(--bg-secondary);
+}
+
+.security h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.info-card {
+    background: var(--surface);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.info-card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.info-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-card li {
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.info-card li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+/* Footer */
+.footer {
+    background: var(--surface);
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.footer-content p {
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-dark);
+}
+
+.footer-note {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 36px;
+    }
+
+    .logo-icon {
+        font-size: 36px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .features h2,
+    .documentation h2,
+    .architecture h2,
+    .security h2 {
+        font-size: 28px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .arch-diagram {
+        flex-direction: column;
+    }
+
+    .arch-arrow {
+        transform: rotate(90deg);
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .config-table {
+        font-size: 13px;
+    }
+
+    .config-table th,
+    .config-table td {
+        padding: 8px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.feature-card,
+.doc-section,
+.info-card {
+    animation: fadeIn 0.6s ease-out;
+}

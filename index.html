@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiceLink Integration - Peer-to-Peer Voice Calling for Chat Apps</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📞</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">📞</span>
+                    <h1>VoiceLink</h1>
+                </div>
+                <p class="tagline">Seamless Voice Calling Integration for Any Chat App</p>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Transform Your Chat into a Full Communication Platform</h2>
+                <p>Add peer-to-peer voice calling to any existing chat application with just a few lines of code. No complex infrastructure needed.</p>
+                <div class="cta-buttons">
+                    <a href="#demo" class="btn btn-primary">Try Live Demo</a>
+                    <a href="#documentation" class="btn btn-secondary">View Documentation</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Powerful Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Peer-to-Peer</h3>
+                    <p>Direct WebRTC connections ensure privacy and low latency without routing through servers.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎙️</div>
+                    <h3>Crystal Clear Audio</h3>
+                    <p>Built-in noise suppression, echo cancellation, and auto gain control for professional quality calls.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Mobile Ready</h3>
+                    <p>Works seamlessly on desktop and mobile browsers with vibration and notification support.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Real-time Updates</h3>
+                    <p>Instant call status updates using Supabase real-time subscriptions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Auto Reconnection</h3>
+                    <p>Automatically reconnects if the network drops during a call.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Call History</h3>
+                    <p>Track all calls with detailed logs including duration, status, and timestamps.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎬</div>
+                    <h3>Auto Record call history</h3>
+                    <p>Automatically stores calls history securely in Supabase DB</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🟢</div>
+                    <h3>Online Status</h3>
+                    <p>Check user availability before calling with real-time online/offline status.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="demo-section">
+            <h2>Live Demo</h2>
+            <p class="demo-description">Experience VoiceLink in action with our interactive demo. Open the demo in two separate windows to test peer-to-peer calling.</p>
+            <div class="demo-card">
+                <a href="demo.html" target="_blank" class="btn btn-primary btn-large">
+                    Open Demo Chat App
+                </a>
+                <p class="demo-note">💡 Tip: Open this link in two different browser windows and login as different users to test calling functionality.</p>
+            </div>
+        </section>
+
+        <section id="installation" class="installation">
+            <h2>Quick Installation</h2>
+            <div class="code-block">
+                <div class="code-header">
+                    <span>HTML</span>
+                    <button class="copy-btn" onclick="copyCode('install-code')">Copy</button>
+                </div>
+                <pre id="install-code"><code>&lt;!-- Include Supabase Client --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"&gt;&lt;/script&gt;
+
+&lt;!-- Include VoiceLink --&gt;
+&lt;script src="https://cartier-app.github.io/webrtcs/voicelink-integration.js"&gt;&lt;/script&gt;
+
+&lt;!-- Add Call Button (optional - will be created automatically if not found) --&gt;
+&lt;button id="voice-call"&gt;📞&lt;/button&gt;
+
+&lt;script&gt;
+  // Initialize VoiceLink
+  VoiceLink.init({
+    supabaseUrl: "YOUR_SUPABASE_URL",
+    supabaseKey: "YOUR_SUPABASE_ANON_KEY",
+    currentUser: "john_doe",
+    friendUser: "jane_smith"
+  });
+&lt;/script&gt;</code></pre>
+            </div>
+        </section>
+
+        <section id="documentation" class="documentation">
+            <h2>Documentation</h2>
+            
+            <div class="doc-section">
+                <h3>Configuration Options</h3>
+                <table class="config-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Type</th>
+                            <th>Required</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>supabaseUrl</code></td>
+                            <td>string</td>
+                            <td>✅ Yes</td>
+                            <td>Your Supabase project URL</td>
+                        </tr>
+                        <tr>
+                            <td><code>supabaseKey</code></td>
+                            <td>string</td>
+                            <td>✅ Yes</td>
+                            <td>Your Supabase anon key</td>
+                        </tr>
+                        <tr>
+                            <td><code>currentUser</code></td>
+                            <td>string</td>
+                            <td>✅ Yes</td>
+                            <td>Username of the logged-in user</td>
+                        </tr>
+                        <tr>
+                            <td><code>friendUser</code></td>
+                            <td>string</td>
+                            <td>✅ Yes</td>
+                            <td>Username of the chat partner</td>
+                        </tr>
+                        <tr>
+                            <td><code>buttonSelector</code></td>
+                            <td>string</td>
+                            <td>❌ No</td>
+                            <td>Custom button selector (default: #voice-call)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="doc-section">
+                <h3>Database Setup</h3>
+                <p>Run the provided SQL schema in your Supabase SQL editor:</p>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>SQL</span>
+                        <button class="copy-btn" onclick="copyCode('sql-code')">Copy</button>
+                    </div>
+                    <pre id="sql-code"><code>-- Run database-schema.sql in your Supabase project
+-- This creates all necessary tables and functions
+
+-- Key tables:
+-- - users: Track online/busy status
+-- - rooms: Manage chat sessions between users
+-- - calls: Store call history and status
+-- - signaling: Handle WebRTC signaling data
+-- - notifications: Manage missed calls and notifications</code></pre>
+                </div>
+            </div>
+
+            <div class="doc-section">
+                <h3>Storage Setup</h3>
+                <p>Create a storage bucket:</p>
+                <ol class="setup-steps">
+                    <li>Go to Supabase Dashboard → Storage</li>
+                    <li>Set it to private for security</li>
+                    <li>Configure RLS policies as needed</li>
+                </ol>
+            </div>
+
+            <div class="doc-section">
+                <h3>Features Included</h3>
+                <ul class="features-list">
+                    <li>✅ Peer-to-peer WebRTC audio calls</li>
+                    <li>✅ Real-time call status updates</li>
+                    <li>✅ Online/offline user status</li>
+                    <li>✅ Busy state management</li>
+                    <li>✅ Call history logging</li>
+                    <li>✅ Noise suppression & echo cancellation</li>
+                    <li>✅ Auto reconnection on network drop</li>
+                    <li>✅ Browser notifications</li>
+                    <li>✅ Mobile vibration support</li>
+                    <li>✅ Call duration timer</li>
+                    <li>✅ Mute/unmute microphone</li>
+                    <li>✅ Speaker volume control</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="architecture">
+            <h2>System Architecture</h2>
+            <div class="arch-diagram">
+                <div class="arch-component">
+                    <h4>Frontend</h4>
+                    <p>VoiceLink Integration JS</p>
+                    <p class="arch-tech">HTML, CSS, JavaScript</p>
+                </div>
+                <div class="arch-arrow">→</div>
+                <div class="arch-component">
+                    <h4>WebRTC</h4>
+                    <p>Peer-to-Peer Connection</p>
+                    <p class="arch-tech">Direct Audio Stream</p>
+                </div>
+                <div class="arch-arrow">→</div>
+                <div class="arch-component">
+                    <h4>Backend</h4>
+                    <p>Supabase</p>
+                    <p class="arch-tech">Real-time, Database, Storage</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="security">
+            <h2>Security & Performance</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>🔐 Security</h3>
+                    <ul>
+                        <li>Row Level Security (RLS) enabled on all tables</li>
+                        <li>Peer-to-peer audio streams (no server routing)</li>
+                        <li>STUN servers for NAT traversal</li>
+                        <li>Secure signaling through Supabase</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>⚡ Performance</h3>
+                    <ul>
+                        <li>Low latency with P2P connections</li>
+                        <li>Efficient real-time subscriptions</li>
+                        <li>Automatic cleanup of old signaling data</li>
+                        <li>Optimized database queries with indexes</li>
+                        <li>Automatic reconnection on failures</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>VoiceLink Integration v1.0.0</p>
+                <p class="footer-links">
+                    <a href="https://github.com/Cartier-app/webrtcs" target="_blank">GitHub</a>
+                    <span>•</span>
+                    <a>Database Schema</a>
+                    <span>•</span>
+                </p>
+                <p class="footer-note">Built with WebRTC</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function copyCode(elementId) {
+            const code = document.getElementById(elementId).textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = 'Copied!';
+                btn.style.background = '#25D366';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.background = '';
+                }, 2000);
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
